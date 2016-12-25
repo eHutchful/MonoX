@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'icons';
+    src:url('fonts/icomoon.eot');
+    src:url('fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+                   url('fonts/icomoon.woff') format('woff'),
+                   url('fonts/icomoon.ttf') format('truetype'),
+                   url('fonts/icomoon.svg#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+%iconBulder {
+    font-family: "icons";
+    speak: none;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+}
+
+@each $entypo in (
+    file "\e000",
+    user "\e001",
+    key "\e002",
+    news "\e003",
+    folder "\e004",
+    graph "\e005",
+    shield "\e006",
+    pricetag "\e007",
+    pencil "\e008",
+    cloud "\e00a",
+    home "\e0009",
+    toggle "\e00b",
+    list "\e00c",
+    plane "\e00d",
+    med "\e00e",
+    adjust "\e00f",
+    pin "\e010",
+    flag "\e011",
+    ribbon "\e012",
+    book "\e018",
+    cog "\e013"
+
+) {
+.icon-#{nth($entypo, 1)} {
+    &:before {
+        @extend %iconBulder;
+        content: "#{nth($entypo, 2)}";
+        }
+    }
+}              

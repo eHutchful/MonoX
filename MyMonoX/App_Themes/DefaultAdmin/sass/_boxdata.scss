@@ -1,0 +1,29 @@
+.box-data-display {
+	background-color: #f4f4f4;
+	border: 1px solid #e6e6e6;
+	text-align: center;
+	border-radius: 5px;
+	padding: 2em 1em;
+}
+
+.box-data-number {
+	display: block;
+	font-size: 2.5em;
+	font-weight: 700;
+	margin-bottom: 24px;
+
+	@media #{$large} {
+		font-size: 4em;
+	}
+}
+
+.box-data-label {
+	color: #8b8b8b;
+	text-transform: uppercase;
+	font-size: 0.7em;
+	font-weight: 700;
+
+	@media #{$large} {
+		font-size: 0.75em;
+	}
+}

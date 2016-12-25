@@ -1,0 +1,478 @@
+.float-left {
+	float: left;
+}
+.float-right {
+	float: right;
+}
+body {
+	background-color: $light-gray;
+}
+select {
+	@include form-element();
+}
+.installer-main {
+	width: 100%;
+	//height: emCalc(650px);
+	@include clearfix();
+	margin: emCalc(50px) auto;
+	background-color: $dark-gray;
+	color: $light-gray;
+	padding: emCalc(25px);
+	position: relative;
+	ul {
+		list-style-type: none;
+	}
+	@media #{$small} {
+		width: emCalc(800px);
+	}
+}
+.installer-header {
+	@include clearfix();
+	border-bottom: 1px solid lighten($dark-gray, 10%);
+	@include vSpacer(1, bottom);
+	@include vMargin(1, bottom);
+	
+	.installer-header-welcome {
+		width: 100%;
+		float: left;
+		h2 {
+			font-size: emCalc(28px);
+			line-height: 1;
+		}
+		text-align: center;
+		@media #{$small} {
+			width: 80%;
+			text-align: left;
+		}
+	}
+	.installer-header-logo {
+		width: 100%;
+		text-align: center;
+		img {
+			@include vMargin(1);
+		}
+		@media #{$small} {
+			width: 20%;
+			float: left;
+			text-align: center;
+			img {
+				@include vMargin(0);
+			}
+		}
+	}
+	.monox-version {
+		font-size: emCalc(12px);
+	}
+}
+.installer-header-version {
+	color: lighten($dark-gray, 25%);
+	font-size: 12px;
+	display: block;
+	@media #{$small} {
+		display: inline;
+	}
+}
+.installer-default {
+	ul{
+		@include clearfix();
+		@include vSpacer(1, bottom);
+		@include vMargin(2, bottom);
+		border-bottom: 1px solid lighten($dark-gray, 10%);
+		li{
+			display: block;
+			width: 100%;
+			float: left;
+			padding-right: emCalc(15px);
+			margin-bottom: emCalc(15px);
+			&:last-child {
+				padding-right: 0px;
+				width: 100%;
+			}
+			strong{
+				display: block;
+			}
+			@media #{$small} {
+				width: 35%;
+				margin-bottom: emCalc(0);
+				&:last-child {
+					width: 30%;
+				}
+			}
+		}
+		
+
+	}
+	.item_info {
+		font-size: 12px;
+		display: block;
+		@include vMargin(1, bottom)
+	}
+	a{
+		font-size: 12px;
+		display: block
+	}
+}
+.permissions {
+	height: emCalc(245px);
+	overflow-x: hidden;
+	overflow-y: scroll;
+	background-color: darken($light-gray, 10%);
+	@include vMargin(1);
+	padding: emCalc(15px);
+	.permissions-box {
+		
+		color: $dark-gray;
+		font-size: 12px;
+		@include vSpacer(1, bottom);
+		@include vMargin(1, bottom);
+		border-bottom: 1px solid lighten($dark-gray, 10%);
+		img {
+			float: left;
+			margin-right: emCalc(15px);
+		}
+		.button-holder {
+			text-align: left;
+			padding-left: emCalc(70px);
+			input[type="submit"] {
+				@include button($button-tny);
+			}
+		}
+	}
+}
+.installer-footer {
+	border-top: 1px solid lighten($dark-gray, 10%);
+	padding-top: 25px;
+ }
+.installer-footer-buttons {
+	.button-cancel, .button-custom, .button-previous, .button-next, .AdminLargeButton {
+		display: block;
+		height: 46px;
+		font-size: emCalc(18px);
+		font-weight: bold;
+		padding: 10px;
+		background-color: $primary-color;
+		margin-bottom: 15px;
+		border: none;
+		color: $white;
+		float: left;
+		cursor: pointer;
+		&:hover {
+			background-color: darken($primary-color, 10);
+		}
+		&:focus{
+			outline: none;
+		}
+		@media #{$small} {
+			height: 26px;
+			background: url(img/previous-icon.png) left top no-repeat transparent;
+			padding: 0 0 0 emCalc(20px);;
+			margin-bottom: 0;
+			color: $light-gray;
+			&:hover {
+				background: url(img/previous-icon.png) left bottom no-repeat transparent;
+				color: $primary-color;
+			}
+		}
+	}
+	.button-cancel {
+		width: 100%;
+		@media #{$small} {
+			width: auto;
+			background: url(img/cancel-icon.png) left top no-repeat transparent;
+			&:hover {
+				background: url(img/cancel-icon.png) left bottom no-repeat transparent;
+			}
+		}
+	}
+	.button-previous {
+		float: left;
+		width: 49%;
+		margin-right: 1%;
+		@media #{$small} {
+			float: right;
+			width: auto;
+		}
+	}
+	.button-next {
+		float: right;
+		overflow: hidden;
+		width: 50%;
+		@media #{$small} {
+			float: right;
+			text-align: right;
+			width: auto;
+			background: url(img/next-icon.png) right top no-repeat transparent;
+			padding-right: emCalc(20px);
+			&:hover {
+				background: url(img/next-icon.png) right bottom no-repeat transparent;
+			}
+		}
+	}
+	.AdminLargeButton {
+		width: 100%;
+		@media #{$small} {
+			background: none;
+			margin-left: emCalc(20px);
+			width: auto;
+			&:hover {
+				background: none
+			}
+		}
+	}
+}
+.note-holder {
+	font-size: 12px;
+	line-height: 1.5;
+}
+.installer_license {
+	line-height: 1.5;
+	iframe {
+		width: 100%;
+		height: 490px;
+		background-color: $light-gray;
+		border: none;
+	}
+	.installer_options {
+		@include clearfix();
+		@include vMargin(1, top);
+		@include vSpacer(1,bottom);
+		font-size: 12px;
+	}
+	.installer_printable {
+		display: block;
+		//padding-top: 5px;
+		padding-left: 25px;
+		background: url(img/print-icon.png) left center no-repeat transparent;
+	}
+	input[type="checkbox"] {
+		margin-right: 10px;
+		//margin-top: 3px;
+	}
+
+}
+.installer-footer-cp {
+	span {
+		background: none repeat scroll 0 0 red;
+		bottom: 225px;
+		color: #FFFFFF;
+		font-size: 12px;
+		padding: 15px;
+		position: absolute;
+		right: 10px;
+		&:before {
+			content: " ";
+			width: 0; 
+			height: 0; 
+			border-left: 10px solid transparent;
+			border-right: 10px solid transparent;
+			border-top: 10px solid #f00;
+			position: absolute;
+			bottom: -10px;
+			right: 63px;
+		}
+		@media #{$small} {
+			bottom: 130px;
+		}
+	}
+}
+.installer_sqlinfo {
+	font-size: 12px;
+	height: 500px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	input[type="text"], input[type="password"] {
+		@include form-element();
+		border: 0px;
+		//margin-bottom: 0px;
+	}
+	.database {
+		padding-right: 15px;
+		input[type="text"], input[type="password"] {
+			width: 100%;
+		}
+		@media #{$small} {
+			input[type="text"], input[type="password"] {
+				width: 33.33%;
+				padding-right: 0;
+			}
+			padding-right: 0;
+		}
+	}
+	p {
+		position: relative;
+	}
+	.installer_note {
+		font-style: italic;
+		line-height: 1;
+	}
+	.installer_option {
+		@include vMargin(1, bottom);
+		display: block;
+		label {
+			font-weight: bold;
+		}
+		input[type="checkbox"] {
+			margin-right: 5px;
+		}
+	}
+	.auth-holder {
+		@include clearfix();
+		position: relative;
+		.ip-input-holder {
+			width: 100%;
+			float: left;
+			padding-right: 15px;
+			@media #{$small} {
+				width: 33.33%;
+				padding-right: 0;
+			}
+		}
+
+		.autenth {
+			width: 100%;
+			float: left;
+			margin-top: 15px;
+			@media #{$small} {
+				width: 66.67%;
+				padding-left: 15px;
+				margin-top: 0px;
+			}
+			p {
+				width: 50%;
+				float: right;
+				padding-right: 15px;
+				margin-top: -19px;
+				margin-bottom: 0;
+				@media #{$small} {
+					width: 50%;
+				}
+			}
+		}
+	}
+}
+.installer_dbinfo {
+	font-size: 12px;
+
+	.installer_editform {
+		input[type="text"],
+		input[type="password"],
+		input[type="e-mail"],
+		select, 
+		textarea{
+			@include form-element();
+			border: none;
+		}
+
+		& > div {
+			width: 100%;
+			position: relative;
+			@media #{$small} {
+				width: 50%;
+			}
+			label {
+				margin-bottom: 10px;
+				margin-top: 10px;
+				display: block;
+			}
+			.required {
+				right: 10px !important;
+			}
+
+		}
+	}
+}
+.installer-advanced-settings {
+	font-size: 12px;
+	dl {
+		dd{
+			width: 100%;
+			@media #{$small} {
+				width: 50%;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			input[type="text"] {
+				@include form-element();
+				margin-bottom: 0;
+			}
+			input[type="checkbox"] {
+				margin-left: 0;
+			}
+		}
+	}
+	h4 {
+		@media #{$small} {
+				width: 50%;
+				margin-left: auto;
+				margin-right: auto;
+			}
+	}
+}
+.installer_complete {
+	font-size: 14px;
+	line-height: 1.6;
+	.img-status-holder {
+		@include vMargin(1);
+		text-align: center;
+	}
+}
+
+.required-field {
+	input {
+		border-left: emCalc(5px) solid $alert-color !important;
+		&:focus {
+			border-left: emCalc(5px) solid $alert-color !important;
+		}
+	}
+}
+.validator {
+	font-family: Georgia;
+	font-style: italic;
+	font-size: emCalc(14px);
+	display: block;
+}
+input[type="text"], 
+input[type="password"], 
+input[type="date"], 
+input[type="datetime"], 
+input[type="datetime-local"], 
+input[type="month"], 
+input[type="week"], 
+input[type="email"], 
+input[type="number"], 
+input[type="search"], 
+input[type="tel"], 
+input[type="time"], 
+input[type="url"], 
+textarea,
+select {
+	&.validator-field {
+		//@include rgba-background(rgba($alert-color,0.15));
+		background-color: #edbbbc !important;
+		&:focus {
+			background-color: #edbbbc !important;
+		}
+	}
+
+
+}
+.required-message {
+	font-size: emCalc(14px);
+	color: #666;
+}
+.new-aplication {
+	.installer_editform {
+		@include clearfix();
+	}
+	.checkbox-holder {
+		input[type="checkbox"] {
+			margin-right: emCalc(15);
+		}
+	}
+	label {
+		display: inline-block;
+	}
+}
+.margin-bottom {
+	margin-bottom: emCalc(10px);
+}

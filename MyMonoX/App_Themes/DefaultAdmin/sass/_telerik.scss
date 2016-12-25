@@ -1,0 +1,412 @@
+.RadTreeView_MetroTouch,
+.RadGrid_MetroTouch, 
+.RadGrid_MetroTouch .rgMasterTable, 
+.RadGrid_MetroTouch .rgDetailTable, 
+.RadGrid_MetroTouch .rgGroupPanel table, 
+.RadGrid_MetroTouch .rgCommandRow table, 
+.RadGrid_MetroTouch .rgEditForm table, 
+.RadGrid_MetroTouch .rgPager table {
+	font-family: $body-font-family !important;
+	font-size: 14px !important;
+}
+.RadGrid_MetroTouch {
+	.rgHoveredRow {
+		td {
+			background-color: $light-gray !important;
+		}
+	}
+}
+.rgMasterTable {
+	.rgRow, .rgAltRow {
+		cursor: pointer !important;
+		&:hover {
+			td {
+				background-color: $light-gray !important;
+			}
+		}
+	}
+}
+.leftPaneHeader {
+	height: 42px !important;
+	position: relative;
+}
+.searchPagesAction {
+	@include button();
+	//float: right !important;
+	background-color: $dark-gray !important;
+	border-color: $black !important;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.searchModule {
+	@include clearfix();
+	padding: 15px;
+	//border: 1px solid $lite-gray;
+	background-color: $light-gray;
+	input[type="checkbox"] {
+		float: left;
+		margin-right: 10px;
+	}
+	.AdminButton {
+		@include button();
+		float: left;
+		margin-right: 10px;
+		margin-bottom: 5px !important;
+	}
+}
+.RadComboBox {
+	width: 100% !important;
+	position: relative;
+	.rcbInput {
+		@include form-element();
+		font-family: $body-font-family !important;
+		font-size: 14px !important;
+		border: 1px solid $light-gray !important;
+		background-color: $white !important;
+		padding-left: 10px !important;
+	}
+	.rcbInputCell, .rcbArrowCell {
+		background: none !important;
+		padding: 0 !important;
+		border: 0px !important;
+	}
+	.rcbArrowCell {
+		width: 0px !important;
+		border: 0px !important;
+		a{
+			//display: block !important;
+			//width: 28px !important;
+			//height: 22px !important;
+			//background: url(img/drop-icon.png) center center no-repeat transparent !important;
+		}
+	}
+}
+.half-lenght {
+	.RadComboBox {
+		.rcbArrowCell {
+			width: 18px !important;
+			a {
+				width: 18px !important;
+			}
+		}
+	}
+}
+.RadEditor {
+	border: none !important;
+	table {
+		margin-bottom: 0px !important;
+	}
+	.reContentCell {
+
+		border: 1px solid $light-gray !important;
+	}
+	.reContentArea {
+		min-height: 100px;
+		@media #{$small} {
+			height: 100% !important;
+		}
+	}
+}
+.RadWindow {
+	@include clearfix();
+	.rwTopLeft, .rwTopRight, .rwTitlebar, .rwFooterLeft, .rwFooterRight, .rwFooterCenter {
+		height: auto !important;
+	}
+	.rwTable {
+		margin-bottom: 0px !important;
+	}
+	table, tr, td {
+		margin-bottom: 0px !important;
+		padding: 0px !important;
+	}
+	.rwStatusbarRow {
+		padding: 10px !important;
+	}
+	.rwTitlebarControls {
+		td{
+			background-color: $dark-gray !important;
+			font-family: $body-font-family !important;
+			vertical-align: middle;
+			a {
+				&:hover {
+					border: none !important
+				}
+			}
+			a, em, span {
+				font-family: $body-font-family !important;
+			}
+			em {
+				padding-top: 8px !important;
+			}
+		}
+		.rwIcon {
+			display: none !important;
+		}
+	}
+	.rwTitlebar, .rwTopLeft, .rwTopRight {
+		background-color: $dark-gray !important;
+	}
+	.rwDialogPopup {
+		.rwPopupButton {
+			border: 0px !important;
+			span {
+				background-color: $primary-color;
+				color: $white;
+				&:hover {
+					background-color: darken($primary-color, 10);
+				}
+			}
+		}	
+	}
+	.rwWindowContent {
+		.RadUpload {
+			width: 100% !important;
+		}
+	}
+}
+
+.RadComboBoxDropDown {
+	font-family: $body-font-family !important;
+}
+
+.RadSplitter_Default {
+	font-family: $body-font-family !important;
+	font-size: 16px !important;
+}
+.RadSplitter_MetroTouch {
+	.rgRow, .rgAltRow {
+		input[type="checkbox"] {
+			margin: 5px !important;
+		}
+	}
+	border-bottom: 1px solid #dedede !important;
+	.rgSelectedRow {
+		td {
+			background-color: transparent !important;
+		}
+	}
+	.leftPaneHeader {
+		span {
+			display: block;
+			margin-top: 8px;
+		}
+	}
+}
+.RadTreeView_MetroTouch {
+	.rtIn {
+		span {
+			height: 32px !important;
+			display: inline-block !important;
+		}
+	}
+	ul{
+		li{
+			line-height: 2.3em !important;
+		}
+	}
+
+}
+.RadMenu_MetroTouch {
+	font-size: 14px !important;
+	font-family: $body-font-family !important;
+}
+.RadMenu_MetroTouch {
+	.rmGroup {
+		.rmLeftImage {
+			padding-bottom: 0px !important;
+		}
+		.rmText {
+			line-height: 2.8 !important;
+		}
+	}
+}
+.RadFileExplorer_MetroTouch {
+	border: 0px !important;
+}
+.RadTabStrip {
+	.rtsLevel {
+		@include vMargin(1, bottom);
+		border-bottom: 1px solid $light-gray;
+		ul {
+			li {
+				a, span {
+					background-image: none !important;
+					padding: 0;
+					margin: 0;
+				}
+				span {
+					//background-color: $light-gray;
+				}
+				.rtsTxt {
+					padding: 0 10px !important;
+				}
+				.rtsSelected {
+					background-color: $primary-color;
+					span {
+						background-color: transparent !important;
+						color: $white !important;
+					}
+				}
+				a{
+					margin-right: 3px;
+				}
+			}
+		}
+	}
+	.rtsLevel1 {
+		.rtsLink {
+			margin: 0 0 -1px 0 !important;
+			border: 1px solid #CDCDCD;
+		}
+	}
+}
+.tab-content {
+	@include vMargin(1, bottom);
+	.riTextBox, .riEnabled, input[type="text"] {
+		height: 2.3125em!important;
+	}
+	.news-chk {
+		margin-top: 5px;
+		margin-right: 10px;
+		display: block;
+		float: left;
+	}
+}
+.display-properties-list {
+	dd{
+		@include clearfix();
+	}
+	input[type="checkbox"] {
+		float: left;
+		margin-right: 10px;
+		margin-top: 3px;
+	}
+}
+// .RadForm.rfdTextbox {
+// 	.riSingle {
+// 		input.rfdDecorated[type="text"] {
+// 			height: auto !important;
+// 		}
+// 	}
+// }
+// .riSingle {
+// 	.riTextBox {
+// 		height: auto !important;
+// 	}
+// }
+.RadPicker {
+	.riTextBox {
+		height: 2.3125em !important;
+		font-family: $body-font-family !important;
+	}
+}
+.RadFileExplorer {
+	.RadGrid {
+		.rgRow, .rgAltRow, .rgEditRow, .rgFooter {
+			td {
+				padding-bottom: 10px !important;
+				padding-top: 10px !important;
+			}
+		}
+	}
+}
+.pageManagerRoot {
+	height:100%;
+	padding:0px;
+	margin-top:0px;
+	margin-bottom:0px;
+}
+.page-admin {
+	width:100%;
+	height:100%;
+	margin-left:auto;
+	margin-right:auto;
+	overflow:visible;
+}
+.rfeCheckBoxContainer {
+	padding: 10px 0;
+	input {
+		float: left !important;
+		margin-right: 10px;
+	}
+}
+.RadWindow_MetroTouch {
+	.rwCorner, .rwFooterRow {
+		background-color: $dark-gray !important;
+	}
+	.rwFooterRow {
+		td{
+			height: 7px !important;
+		}
+	}
+	.rwDialogText {
+		font-family: $body-font-family !important;
+	}
+}
+.RadTabStrip_MetroTouch {
+	font-family: $body-font-family !important;
+	.rtsTxt {
+		padding: 10px 15px !important;
+	}
+}
+.RadWindow_MetroTouch {
+	.rwTable {
+		.rwControlButtons {
+			li {
+				a {
+					&:hover {
+						border: 1px solid transparent !important;
+					}
+				}
+			}
+		}
+	}
+} 
+.news-quick-post, .groups-form, .blog-manager, .rgPagerCell {
+	.RadComboBox_MetroTouch, .RadComboBox {
+		.rcbArrowCell{
+			a{
+				background-image: url(img/OpenPanel.gif) !important;
+				background-position: center center !important;
+			}
+		}
+		.rcbFocused {
+			.rcbArrowCell{
+				a{
+					background-image: url(img/ClosePanel.gif) !important;
+					background-position: center center !important;
+				}
+			}
+		}
+		.rcbInputCell, .rcbArrowCell {
+			border: 0px !important;
+		}
+	}  
+}
+.rgPagerCell {
+	.RadComboBox_MetroTouch {
+		table {
+			background-color: transparent;
+		}
+	}
+}
+
+.SelectedItem {
+	td {
+		background-color: $light-gray !important;
+		 
+	}
+}
+.RadComboBox_MetroTouch {
+	.rcbFocused {
+		.rcbReadOnly {
+			.rcbInput {
+				color: $black !important;
+			}
+		}
+	}
+}
+.MetroTouch.reToolbar {
+	border: 1px solid #ccc;
+}

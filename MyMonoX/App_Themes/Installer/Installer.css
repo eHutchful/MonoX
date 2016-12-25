@@ -1,0 +1,1196 @@
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 16px;
+}
+
+body {
+  background: #2ba6cb;
+  color: #222222;
+  padding: 0;
+  margin: 0;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  position: relative;
+  cursor: default;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+a:focus {
+  outline: none;
+}
+
+img,
+object,
+embed {
+  max-width: 100%;
+  height: auto;
+}
+
+object,
+embed {
+  height: 100%;
+}
+
+img {
+  -ms-interpolation-mode: bicubic;
+}
+
+#map_canvas img,
+#map_canvas embed,
+#map_canvas object,
+.map_canvas img,
+.map_canvas embed,
+.map_canvas object {
+  max-width: none !important;
+}
+
+.left {
+  float: left !important;
+}
+
+.right {
+  float: right !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-justify {
+  text-align: justify !important;
+}
+
+.hide {
+  display: none;
+}
+
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+textarea {
+  height: auto;
+  min-height: 50px;
+}
+
+select {
+  width: 100%;
+}
+
+p.lead {
+  font-size: 1.25em;
+  line-height: 1.6;
+}
+
+.subheader {
+  line-height: 1.4;
+  color: white;
+  font-weight: 300;
+  margin-top: 0.2em;
+  margin-bottom: 0.5em;
+}
+
+/* Typography resets */
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  direction: ltr;
+}
+
+/* Default Link Styles */
+a {
+  color: #2ba6cb;
+  text-decoration: none;
+  line-height: inherit;
+}
+a:hover, a:focus {
+  color: #2795b6;
+}
+a img {
+  border: none;
+}
+
+/* Default paragraph styles */
+p {
+  font-family: inherit;
+  font-weight: normal;
+  font-size: 1em;
+  line-height: 1.6;
+  margin-bottom: 1.42857em;
+  text-rendering: optimizeLegibility;
+}
+p aside {
+  font-size: 1em;
+  line-height: 1.35;
+  font-style: italic;
+}
+
+/* Default header styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  color: #cccccc;
+  text-rendering: optimizeLegibility;
+  margin-top: 0.2em;
+  margin-bottom: 0.5em;
+  line-height: 1.18571em;
+}
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+  font-size: 60%;
+  color: white;
+  line-height: 0;
+}
+
+h1 {
+  font-size: 2.42857em;
+}
+
+h2 {
+  font-size: 1.92857em;
+}
+
+h3 {
+  font-size: 1.57143em;
+}
+
+h4 {
+  font-size: 1.28571em;
+}
+
+h5 {
+  font-size: 1.28571em;
+}
+
+h6 {
+  font-size: 1em;
+}
+
+hr {
+  border: solid #dddddd;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 1.42857em 0 1.35714em;
+  height: 0;
+}
+
+/* Helpful Typography Defaults */
+em,
+i {
+  font-style: italic;
+  line-height: inherit;
+}
+
+strong,
+b {
+  font-weight: bold;
+  line-height: inherit;
+}
+
+small {
+  font-size: 60%;
+  line-height: inherit;
+}
+
+code {
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  font-weight: bold;
+  color: #7f0a0c;
+}
+
+/* Lists */
+ul,
+ol,
+dl {
+  font-size: 1em;
+  line-height: 1.6;
+  margin-bottom: 1.42857em;
+  list-style-position: outside;
+  font-family: inherit;
+}
+
+ul, ol {
+  margin-left: 0;
+}
+
+/* Unordered Lists */
+ul li ul,
+ul li ol {
+  margin-left: 1.42857em;
+  margin-bottom: 0;
+  font-size: 1em;
+  /* Override nested font-size change */
+}
+ul.square li ul, ul.circle li ul, ul.disc li ul {
+  list-style: inherit;
+}
+ul.square {
+  list-style-type: square;
+}
+ul.circle {
+  list-style-type: circle;
+}
+ul.disc {
+  list-style-type: disc;
+}
+ul.no-bullet {
+  list-style: none;
+}
+
+/* Ordered Lists */
+ol li ul,
+ol li ol {
+  margin-left: 1.42857em;
+  margin-bottom: 0;
+}
+
+/* Definition Lists */
+dl dt {
+  margin-bottom: 0.3em;
+  font-weight: bold;
+}
+dl dd {
+  margin-bottom: 0.85714em;
+}
+
+/* Abbreviations */
+abbr,
+acronym {
+  text-transform: uppercase;
+  font-size: 90%;
+  color: #222222;
+  border-bottom: 1px dotted #dddddd;
+  cursor: help;
+}
+
+abbr {
+  text-transform: none;
+}
+
+/* Blockquotes */
+blockquote {
+  margin: 0 0 1.42857em;
+  padding: 0.64286em 1.42857em 0 1.35714em;
+  border-left: 1px solid #dddddd;
+}
+blockquote cite {
+  display: block;
+  font-size: 0.92857em;
+  color: white;
+}
+blockquote cite:before {
+  content: "\2014 \0020";
+}
+blockquote cite a,
+blockquote cite a:visited {
+  color: white;
+}
+
+blockquote,
+blockquote p {
+  line-height: 1.6;
+  color: white;
+}
+
+/* Microformats */
+.vcard {
+  display: inline-block;
+  margin: 0 0 1.42857em 0;
+  border: 1px solid #dddddd;
+  padding: 0.71429em 0.85714em;
+}
+.vcard li {
+  margin: 0;
+  display: block;
+}
+.vcard .fn {
+  font-weight: bold;
+  font-size: 1.07143em;
+}
+
+.vevent .summary {
+  font-weight: bold;
+}
+.vevent abbr {
+  cursor: default;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  padding: 0 0.07143em;
+}
+
+@media only screen and (min-width: 900px) {
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.4;
+  }
+
+  h1 {
+    font-size: 3.14286em;
+  }
+
+  h2 {
+    font-size: 2.64286em;
+  }
+
+  h3 {
+    font-size: 1.92857em;
+  }
+
+  h4 {
+    font-size: 1.64286em;
+  }
+}
+/*
+ * Print styles.
+ *
+ * Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
+ * Credit to Paul Irish and HTML5 Boilerplate (html5boilerplate.com)
+*/
+.print-only {
+  display: none !important;
+}
+
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+}
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+
+  .hide-on-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .hide-for-print {
+    display: none !important;
+  }
+
+  .show-for-print {
+    display: inherit !important;
+  }
+}
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+body {
+  background-color: #cccccc;
+}
+
+select {
+  background-color: white;
+  font-family: inherit;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.75);
+  display: block;
+  font-size: 1em;
+  margin: 0 0 1.14286em 0;
+  padding: 0.57143em;
+  height: 2.64286em;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: -webkit-box-shadow 0.45s, border-color 0.45s ease-in-out;
+  -moz-transition: -moz-box-shadow 0.45s, border-color 0.45s ease-in-out;
+  transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
+}
+select:focus {
+  -webkit-box-shadow: 0 0 5px #999999;
+  -moz-box-shadow: 0 0 5px #999999;
+  box-shadow: 0 0 5px #999999;
+  border-color: #999999;
+}
+select:focus {
+  background: #fafafa;
+  border-color: #999999;
+  outline: none;
+}
+select[disabled] {
+  background-color: #dddddd;
+}
+
+.installer-main {
+  width: 100%;
+  *zoom: 1;
+  margin: 3.57143em auto;
+  background-color: #333333;
+  color: #cccccc;
+  padding: 1.78571em;
+  position: relative;
+}
+.installer-main:before, .installer-main:after {
+  content: " ";
+  display: table;
+}
+.installer-main:after {
+  clear: both;
+}
+.installer-main ul {
+  list-style-type: none;
+}
+@media only screen and (min-width: 900px) {
+  .installer-main {
+    width: 57.14286em;
+  }
+}
+
+.installer-header {
+  *zoom: 1;
+  border-bottom: 1px solid #4d4d4d;
+  padding-bottom: 0.85714em;
+  margin-bottom: 0.85714em;
+}
+.installer-header:before, .installer-header:after {
+  content: " ";
+  display: table;
+}
+.installer-header:after {
+  clear: both;
+}
+.installer-header .installer-header-welcome {
+  width: 100%;
+  float: left;
+  text-align: center;
+}
+.installer-header .installer-header-welcome h2 {
+  font-size: 2em;
+  line-height: 1;
+}
+@media only screen and (min-width: 900px) {
+  .installer-header .installer-header-welcome {
+    width: 80%;
+    text-align: left;
+  }
+}
+.installer-header .installer-header-logo {
+  width: 100%;
+  text-align: center;
+}
+.installer-header .installer-header-logo img {
+  margin-top: 0.85714em;
+  margin-bottom: 0.85714em;
+}
+@media only screen and (min-width: 900px) {
+  .installer-header .installer-header-logo {
+    width: 20%;
+    float: left;
+    text-align: center;
+  }
+  .installer-header .installer-header-logo img {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+.installer-header .monox-version {
+  font-size: 0.85714em;
+}
+
+.installer-header-version {
+  color: #737373;
+  font-size: 12px;
+  display: block;
+}
+@media only screen and (min-width: 900px) {
+  .installer-header-version {
+    display: inline;
+  }
+}
+
+.installer-default ul {
+  *zoom: 1;
+  padding-bottom: 0.85714em;
+  margin-bottom: 1.71429em;
+  border-bottom: 1px solid #4d4d4d;
+}
+.installer-default ul:before, .installer-default ul:after {
+  content: " ";
+  display: table;
+}
+.installer-default ul:after {
+  clear: both;
+}
+.installer-default ul li {
+  display: block;
+  width: 100%;
+  float: left;
+  padding-right: 1.07143em;
+  margin-bottom: 1.07143em;
+}
+.installer-default ul li:last-child {
+  padding-right: 0px;
+  width: 100%;
+}
+.installer-default ul li strong {
+  display: block;
+}
+@media only screen and (min-width: 900px) {
+  .installer-default ul li {
+    width: 35%;
+    margin-bottom: 0;
+  }
+  .installer-default ul li:last-child {
+    width: 30%;
+  }
+}
+.installer-default .item_info {
+  font-size: 12px;
+  display: block;
+  margin-bottom: 0.85714em;
+}
+.installer-default a {
+  font-size: 12px;
+  display: block;
+}
+
+.permissions {
+  height: 17.5em;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: #b3b3b3;
+  margin-top: 0.85714em;
+  margin-bottom: 0.85714em;
+  padding: 1.07143em;
+}
+.permissions .permissions-box {
+  color: #333333;
+  font-size: 12px;
+  padding-bottom: 0.85714em;
+  margin-bottom: 0.85714em;
+  border-bottom: 1px solid #4d4d4d;
+}
+.permissions .permissions-box img {
+  float: left;
+  margin-right: 1.07143em;
+}
+.permissions .permissions-box .button-holder {
+  text-align: left;
+  padding-left: 5em;
+}
+.permissions .permissions-box .button-holder input[type="submit"] {
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: bold;
+  line-height: 1;
+  margin: 0 0 0.35714em;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  padding-top: 0.5em;
+  padding-right: 1em;
+  padding-bottom: 0.57143em;
+  padding-left: 1em;
+  font-size: 0.78571em;
+  background-color: #2ba6cb;
+  border-color: #2284a1;
+  color: white;
+}
+.permissions .permissions-box .button-holder input[type="submit"]:hover, .permissions .permissions-box .button-holder input[type="submit"]:focus {
+  background-color: #2284a1;
+}
+.permissions .permissions-box .button-holder input[type="submit"]:hover, .permissions .permissions-box .button-holder input[type="submit"]:focus {
+  color: white;
+}
+
+.installer-footer {
+  border-top: 1px solid #4d4d4d;
+  padding-top: 25px;
+}
+
+.installer-footer-buttons .button-cancel, .installer-footer-buttons .button-custom, .installer-footer-buttons .button-previous, .installer-footer-buttons .button-next, .installer-footer-buttons .AdminLargeButton {
+  display: block;
+  height: 46px;
+  font-size: 1.28571em;
+  font-weight: bold;
+  padding: 10px;
+  background-color: #2ba6cb;
+  margin-bottom: 15px;
+  border: none;
+  color: white;
+  float: left;
+  cursor: pointer;
+}
+.installer-footer-buttons .button-cancel:hover, .installer-footer-buttons .button-custom:hover, .installer-footer-buttons .button-previous:hover, .installer-footer-buttons .button-next:hover, .installer-footer-buttons .AdminLargeButton:hover {
+  background-color: #2284a1;
+}
+.installer-footer-buttons .button-cancel:focus, .installer-footer-buttons .button-custom:focus, .installer-footer-buttons .button-previous:focus, .installer-footer-buttons .button-next:focus, .installer-footer-buttons .AdminLargeButton:focus {
+  outline: none;
+}
+@media only screen and (min-width: 900px) {
+  .installer-footer-buttons .button-cancel, .installer-footer-buttons .button-custom, .installer-footer-buttons .button-previous, .installer-footer-buttons .button-next, .installer-footer-buttons .AdminLargeButton {
+    height: 26px;
+    background: url(img/previous-icon.png) left top no-repeat transparent;
+    padding: 0 0 0 1.42857em;
+    margin-bottom: 0;
+    color: #cccccc;
+  }
+  .installer-footer-buttons .button-cancel:hover, .installer-footer-buttons .button-custom:hover, .installer-footer-buttons .button-previous:hover, .installer-footer-buttons .button-next:hover, .installer-footer-buttons .AdminLargeButton:hover {
+    background: url(img/previous-icon.png) left bottom no-repeat transparent;
+    color: #2ba6cb;
+  }
+}
+.installer-footer-buttons .button-cancel {
+  width: 100%;
+}
+@media only screen and (min-width: 900px) {
+  .installer-footer-buttons .button-cancel {
+    width: auto;
+    background: url(img/cancel-icon.png) left top no-repeat transparent;
+  }
+  .installer-footer-buttons .button-cancel:hover {
+    background: url(img/cancel-icon.png) left bottom no-repeat transparent;
+  }
+}
+.installer-footer-buttons .button-previous {
+  float: left;
+  width: 49%;
+  margin-right: 1%;
+}
+@media only screen and (min-width: 900px) {
+  .installer-footer-buttons .button-previous {
+    float: right;
+    width: auto;
+  }
+}
+.installer-footer-buttons .button-next {
+  float: right;
+  overflow: hidden;
+  width: 50%;
+}
+@media only screen and (min-width: 900px) {
+  .installer-footer-buttons .button-next {
+    float: right;
+    text-align: right;
+    width: auto;
+    background: url(img/next-icon.png) right top no-repeat transparent;
+    padding-right: 1.42857em;
+  }
+  .installer-footer-buttons .button-next:hover {
+    background: url(img/next-icon.png) right bottom no-repeat transparent;
+  }
+}
+.installer-footer-buttons .AdminLargeButton {
+  width: 100%;
+}
+@media only screen and (min-width: 900px) {
+  .installer-footer-buttons .AdminLargeButton {
+    background: none;
+    margin-left: 1.42857em;
+    width: auto;
+  }
+  .installer-footer-buttons .AdminLargeButton:hover {
+    background: none;
+  }
+}
+
+.note-holder {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.installer_license {
+  line-height: 1.5;
+}
+.installer_license iframe {
+  width: 100%;
+  height: 490px;
+  background-color: #cccccc;
+  border: none;
+}
+.installer_license .installer_options {
+  *zoom: 1;
+  margin-top: 0.85714em;
+  padding-bottom: 0.85714em;
+  font-size: 12px;
+}
+.installer_license .installer_options:before, .installer_license .installer_options:after {
+  content: " ";
+  display: table;
+}
+.installer_license .installer_options:after {
+  clear: both;
+}
+.installer_license .installer_printable {
+  display: block;
+  padding-left: 25px;
+  background: url(img/print-icon.png) left center no-repeat transparent;
+}
+.installer_license input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.installer-footer-cp span {
+  background: none repeat scroll 0 0 red;
+  bottom: 225px;
+  color: #FFFFFF;
+  font-size: 12px;
+  padding: 15px;
+  position: absolute;
+  right: 10px;
+}
+.installer-footer-cp span:before {
+  content: " ";
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #f00;
+  position: absolute;
+  bottom: -10px;
+  right: 63px;
+}
+@media only screen and (min-width: 900px) {
+  .installer-footer-cp span {
+    bottom: 130px;
+  }
+}
+
+.installer_sqlinfo {
+  font-size: 12px;
+  height: 500px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.installer_sqlinfo input[type="text"], .installer_sqlinfo input[type="password"] {
+  background-color: white;
+  font-family: inherit;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.75);
+  display: block;
+  font-size: 1em;
+  margin: 0 0 1.14286em 0;
+  padding: 0.57143em;
+  height: 2.64286em;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: -webkit-box-shadow 0.45s, border-color 0.45s ease-in-out;
+  -moz-transition: -moz-box-shadow 0.45s, border-color 0.45s ease-in-out;
+  transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
+  border: 0px;
+}
+.installer_sqlinfo input[type="text"]:focus, .installer_sqlinfo input[type="password"]:focus {
+  -webkit-box-shadow: 0 0 5px #999999;
+  -moz-box-shadow: 0 0 5px #999999;
+  box-shadow: 0 0 5px #999999;
+  border-color: #999999;
+}
+.installer_sqlinfo input[type="text"]:focus, .installer_sqlinfo input[type="password"]:focus {
+  background: #fafafa;
+  border-color: #999999;
+  outline: none;
+}
+.installer_sqlinfo input[type="text"][disabled], .installer_sqlinfo input[type="password"][disabled] {
+  background-color: #dddddd;
+}
+.installer_sqlinfo .database {
+  padding-right: 15px;
+}
+.installer_sqlinfo .database input[type="text"], .installer_sqlinfo .database input[type="password"] {
+  width: 100%;
+}
+@media only screen and (min-width: 900px) {
+  .installer_sqlinfo .database {
+    padding-right: 0;
+  }
+  .installer_sqlinfo .database input[type="text"], .installer_sqlinfo .database input[type="password"] {
+    width: 33.33%;
+    padding-right: 0;
+  }
+}
+.installer_sqlinfo p {
+  position: relative;
+}
+.installer_sqlinfo .installer_note {
+  font-style: italic;
+  line-height: 1;
+}
+.installer_sqlinfo .installer_option {
+  margin-bottom: 0.85714em;
+  display: block;
+}
+.installer_sqlinfo .installer_option label {
+  font-weight: bold;
+}
+.installer_sqlinfo .installer_option input[type="checkbox"] {
+  margin-right: 5px;
+}
+.installer_sqlinfo .auth-holder {
+  *zoom: 1;
+  position: relative;
+}
+.installer_sqlinfo .auth-holder:before, .installer_sqlinfo .auth-holder:after {
+  content: " ";
+  display: table;
+}
+.installer_sqlinfo .auth-holder:after {
+  clear: both;
+}
+.installer_sqlinfo .auth-holder .ip-input-holder {
+  width: 100%;
+  float: left;
+  padding-right: 15px;
+}
+@media only screen and (min-width: 900px) {
+  .installer_sqlinfo .auth-holder .ip-input-holder {
+    width: 33.33%;
+    padding-right: 0;
+  }
+}
+.installer_sqlinfo .auth-holder .autenth {
+  width: 100%;
+  float: left;
+  margin-top: 15px;
+}
+@media only screen and (min-width: 900px) {
+  .installer_sqlinfo .auth-holder .autenth {
+    width: 66.67%;
+    padding-left: 15px;
+    margin-top: 0px;
+  }
+}
+.installer_sqlinfo .auth-holder .autenth p {
+  width: 50%;
+  float: right;
+  padding-right: 15px;
+  margin-top: -19px;
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 900px) {
+  .installer_sqlinfo .auth-holder .autenth p {
+    width: 50%;
+  }
+}
+
+.installer_dbinfo {
+  font-size: 12px;
+}
+.installer_dbinfo .installer_editform input[type="text"],
+.installer_dbinfo .installer_editform input[type="password"],
+.installer_dbinfo .installer_editform input[type="e-mail"],
+.installer_dbinfo .installer_editform select,
+.installer_dbinfo .installer_editform textarea {
+  background-color: white;
+  font-family: inherit;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.75);
+  display: block;
+  font-size: 1em;
+  margin: 0 0 1.14286em 0;
+  padding: 0.57143em;
+  height: 2.64286em;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: -webkit-box-shadow 0.45s, border-color 0.45s ease-in-out;
+  -moz-transition: -moz-box-shadow 0.45s, border-color 0.45s ease-in-out;
+  transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
+  border: none;
+}
+.installer_dbinfo .installer_editform input[type="text"]:focus,
+.installer_dbinfo .installer_editform input[type="password"]:focus,
+.installer_dbinfo .installer_editform input[type="e-mail"]:focus,
+.installer_dbinfo .installer_editform select:focus,
+.installer_dbinfo .installer_editform textarea:focus {
+  -webkit-box-shadow: 0 0 5px #999999;
+  -moz-box-shadow: 0 0 5px #999999;
+  box-shadow: 0 0 5px #999999;
+  border-color: #999999;
+}
+.installer_dbinfo .installer_editform input[type="text"]:focus,
+.installer_dbinfo .installer_editform input[type="password"]:focus,
+.installer_dbinfo .installer_editform input[type="e-mail"]:focus,
+.installer_dbinfo .installer_editform select:focus,
+.installer_dbinfo .installer_editform textarea:focus {
+  background: #fafafa;
+  border-color: #999999;
+  outline: none;
+}
+.installer_dbinfo .installer_editform input[type="text"][disabled],
+.installer_dbinfo .installer_editform input[type="password"][disabled],
+.installer_dbinfo .installer_editform input[type="e-mail"][disabled],
+.installer_dbinfo .installer_editform select[disabled],
+.installer_dbinfo .installer_editform textarea[disabled] {
+  background-color: #dddddd;
+}
+.installer_dbinfo .installer_editform > div {
+  width: 100%;
+  position: relative;
+}
+@media only screen and (min-width: 900px) {
+  .installer_dbinfo .installer_editform > div {
+    width: 50%;
+  }
+}
+.installer_dbinfo .installer_editform > div label {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  display: block;
+}
+.installer_dbinfo .installer_editform > div .required {
+  right: 10px !important;
+}
+
+.installer-advanced-settings {
+  font-size: 12px;
+}
+.installer-advanced-settings dl dd {
+  width: 100%;
+}
+@media only screen and (min-width: 900px) {
+  .installer-advanced-settings dl dd {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.installer-advanced-settings dl dd input[type="text"] {
+  background-color: white;
+  font-family: inherit;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.75);
+  display: block;
+  font-size: 1em;
+  margin: 0 0 1.14286em 0;
+  padding: 0.57143em;
+  height: 2.64286em;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: -webkit-box-shadow 0.45s, border-color 0.45s ease-in-out;
+  -moz-transition: -moz-box-shadow 0.45s, border-color 0.45s ease-in-out;
+  transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
+  margin-bottom: 0;
+}
+.installer-advanced-settings dl dd input[type="text"]:focus {
+  -webkit-box-shadow: 0 0 5px #999999;
+  -moz-box-shadow: 0 0 5px #999999;
+  box-shadow: 0 0 5px #999999;
+  border-color: #999999;
+}
+.installer-advanced-settings dl dd input[type="text"]:focus {
+  background: #fafafa;
+  border-color: #999999;
+  outline: none;
+}
+.installer-advanced-settings dl dd input[type="text"][disabled] {
+  background-color: #dddddd;
+}
+.installer-advanced-settings dl dd input[type="checkbox"] {
+  margin-left: 0;
+}
+@media only screen and (min-width: 900px) {
+  .installer-advanced-settings h4 {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.installer_complete {
+  font-size: 14px;
+  line-height: 1.6;
+}
+.installer_complete .img-status-holder {
+  margin-top: 0.85714em;
+  margin-bottom: 0.85714em;
+  text-align: center;
+}
+
+.required-field input {
+  border-left: 0.35714em solid #c60f13 !important;
+}
+.required-field input:focus {
+  border-left: 0.35714em solid #c60f13 !important;
+}
+
+.validator {
+  font-family: Georgia;
+  font-style: italic;
+  font-size: 1em;
+  display: block;
+}
+
+input[type="text"].validator-field,
+input[type="password"].validator-field,
+input[type="date"].validator-field,
+input[type="datetime"].validator-field,
+input[type="datetime-local"].validator-field,
+input[type="month"].validator-field,
+input[type="week"].validator-field,
+input[type="email"].validator-field,
+input[type="number"].validator-field,
+input[type="search"].validator-field,
+input[type="tel"].validator-field,
+input[type="time"].validator-field,
+input[type="url"].validator-field,
+textarea.validator-field,
+select.validator-field {
+  background-color: #edbbbc !important;
+}
+input[type="text"].validator-field:focus,
+input[type="password"].validator-field:focus,
+input[type="date"].validator-field:focus,
+input[type="datetime"].validator-field:focus,
+input[type="datetime-local"].validator-field:focus,
+input[type="month"].validator-field:focus,
+input[type="week"].validator-field:focus,
+input[type="email"].validator-field:focus,
+input[type="number"].validator-field:focus,
+input[type="search"].validator-field:focus,
+input[type="tel"].validator-field:focus,
+input[type="time"].validator-field:focus,
+input[type="url"].validator-field:focus,
+textarea.validator-field:focus,
+select.validator-field:focus {
+  background-color: #edbbbc !important;
+}
+
+.required-message {
+  font-size: 1em;
+  color: #666;
+}
+
+.new-aplication .installer_editform {
+  *zoom: 1;
+}
+.new-aplication .installer_editform:before, .new-aplication .installer_editform:after {
+  content: " ";
+  display: table;
+}
+.new-aplication .installer_editform:after {
+  clear: both;
+}
+.new-aplication .checkbox-holder input[type="checkbox"] {
+  margin-right: 1.07143em;
+}
+.new-aplication label {
+  display: inline-block;
+}
+
+.margin-bottom {
+  margin-bottom: 0.71429em;
+}

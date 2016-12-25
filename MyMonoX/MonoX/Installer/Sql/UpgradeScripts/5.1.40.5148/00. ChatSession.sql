@@ -1,0 +1,22 @@
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[ChatSession](
+	[Id] [uniqueidentifier] NOT NULL,
+	[DateCreated] [datetime] NOT NULL,
+	[IsGroup] [bit] NOT NULL,
+ CONSTRAINT [PK_ChatSession] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+ALTER TABLE [dbo].[ChatSession] ADD  CONSTRAINT [DF_ChatSession_IsGroup]  DEFAULT ((0)) FOR [IsGroup]
+GO
+
+

@@ -1,0 +1,19 @@
+.spacer-tny {
+	@include margin-trailer(0.5);
+}
+
+.spacer-sml {
+	@include margin-trailer(1);
+}
+
+.spacer-med {
+	@include margin-trailer(2);
+}
+
+.spacer-lrg {
+	@include margin-trailer(3);
+}
+
+.spacer-xlrg {
+	@include margin-trailer(4);
+}

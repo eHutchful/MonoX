@@ -1,0 +1,20 @@
+﻿<div class="item">
+    <div title="<# FileName #>" class="icon-holder">
+        <# FileIcon #>
+    </div>
+    <div class="gallery-options">
+        #if( $EditVisible )
+        <span class="edit"><# EditButton #></span>
+        #end
+        #if( $PreviewVisible )
+        <span class="view"><# ViewButton #></span>
+        #end
+        <span class="delete"><# DeleteButton #></span>
+        <span class="<# PrivacyLevelCSS #>"></span>
+    </div>
+    #if( $TagsVisible )
+    <div class="tags">
+        <# Tags #>
+    </div>
+    #end
+</div>
